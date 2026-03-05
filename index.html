@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kshama Girish | Portfolio</title>
+  <meta name="description" content="Portfolio website of Kshama Girish." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="bg" aria-hidden="true"></div>
+
+  <!-- Animated particle background -->
+  <div id="tsparticles" aria-hidden="true"></div>
+
+  <!-- Bottom-right atom button -->
+  <button class="atom-btn" id="atomBtn" type="button" aria-label="Spawn particles">
+    ⟡
+  </button>
+
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="nav-left">
+      <span class="name">Kshama Girish</span>
+    </div>
+
+    <nav class="nav-center" aria-label="Primary navigation">
+      <button class="nav-item" data-route="home">Home</button>
+      <button class="nav-item" data-route="projects">Projects</button>
+      <button class="nav-item" data-route="experience">Experience</button>
+      <button class="nav-item" data-route="about">About</button>
+      <button class="nav-item" data-route="resume">Resume</button>
+      <button class="nav-item" data-route="contact">Contact</button>
+    </nav>
+
+    <div class="nav-right">
+      <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <!-- PAGES CONTAINER -->
+  <main class="container">
+
+    <!-- HOME -->
+    <section class="page section" data-page="home">
+      <p class="page-label">HOME</p>
+
+      <!-- HERO -->
+      <div class="hero">
+        <div class="hero-photo-wrapper">
+          <div class="hero-photo-circle">
+            <img src="me.jpg" alt="Kshama Girish" />
+          </div>
+        </div>
+
+        <div class="hero-content">
+          <span class="pill">Data Analyst · Data Science</span>
+
+          <h1 class="hero-title">Kshama Girish</h1>
+
+          <p class="hero-subtitle">
+            MS Data Science @ ASU. I build analytics + ML solutions, dashboards,
+            and scalable data pipelines that turn messy data into decisions.
+          </p>
+
+          <div class="btn-row hero-btns">
+            <button class="btn primary" type="button" onclick="showPage('projects')">
+              View Projects
+            </button>
+
+            <a class="btn ghost" href="./Kshama_Girish_Resume.pdf" download="Kshama_Girish_Resume.pdf">
+  Download Resume
+</a>
+          </div>
+
+          <p class="hero-note muted">
+            Open to Data Analyst / Data Scientist / Analytics roles · Tempe, AZ · open to relocate
+          </p>
+        </div>
+      </div>
+
+      <!-- FEATURED PROJECTS PREVIEW -->
+      <div class="featured" id="featured">
+        <div class="featured-top">
+          <div>
+            <p class="mini-label">FEATURED PROJECTS</p>
+            <h2 class="featured-title">Work that turns data into measurable outcomes</h2>
+          </div>
+
+          <button class="link-btn" type="button" onclick="showPage('projects')">
+            See all projects →
+          </button>
+        </div>
+
+        <div class="grid">
+          <article class="card project-card">
+            <p class="mini-label">BUILD</p>
+            <h3 class="card-title">Tourism Analytics Dashboard</h3>
+            <p class="muted">Analyzed global tourism patterns and built an interactive dashboard with scoring metrics.</p>
+
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">Tableau</span>
+              <span class="tag">EDA</span>
+            </div>
+
+            <div class="card-actions">
+              <button class="btn ghost small" type="button" onclick="showPage('projects')">Details</button>
+              <a class="link" href="#" onclick="return false;">Repo →</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <p class="mini-label">BUILD</p>
+            <h3 class="card-title">NYC Taxi Graph Analytics</h3>
+            <p class="muted">Built a pipeline for graph analytics with streaming ingestion and scalable querying.</p>
+
+            <div class="tags">
+              <span class="tag">Spark</span>
+              <span class="tag">Kafka</span>
+              <span class="tag">Neo4j</span>
+            </div>
+
+            <div class="card-actions">
+              <button class="btn ghost small" type="button" onclick="showPage('projects')">Details</button>
+              <a class="link" href="#" onclick="return false;">Repo →</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <p class="mini-label">BUILD</p>
+            <h3 class="card-title">Claims Risk Triage (Capstone)</h3>
+            <p class="muted">Designed ML-driven triage to prioritize risky insurance claims with explainability.</p>
+
+            <div class="tags">
+              <span class="tag">LightGBM</span>
+              <span class="tag">SHAP</span>
+              <span class="tag">ML</span>
+            </div>
+
+            <div class="card-actions">
+              <button class="btn ghost small" type="button" onclick="showPage('projects')">Details</button>
+              <a class="link" href="#" onclick="return false;">Repo →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- SKILLS -->
+      <section class="home-skills" id="skills">
+        <p class="mini-label">SKILLS</p>
+        <h2 class="skills-title">Technical Toolkit</h2>
+
+        <div class="skills-grid">
+          <article class="card skills-card">
+            <h3 class="skills-card-title">Analytics & Programming</h3>
+            <p class="muted">SQL, Python, Excel, Statistics, A/B Testing, Data Cleaning, EDA</p>
+          </article>
+
+          <article class="card skills-card">
+            <h3 class="skills-card-title">Visualization & BI</h3>
+            <p class="muted">Tableau, Power BI, Matplotlib, Plotly, Dashboard Design, Storytelling</p>
+          </article>
+
+          <article class="card skills-card">
+            <h3 class="skills-card-title">Data & ML</h3>
+            <p class="muted">Spark, Kafka, Neo4j, scikit-learn, LightGBM, SHAP, Pipelines</p>
+          </article>
+        </div>
+      </section>
+    </section>
+    <!-- ✅ IMPORTANT: HOME section is now properly closed -->
+
+    <!-- PROJECTS -->
+    <section class="page section" data-page="projects" hidden>
+      <p class="page-label">PAGE</p>
+      <h1 class="page-title">Projects</h1>
+      <p class="page-subtitle">A mix of analytics, dashboards, and ML systems I’ve built end-to-end.</p>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Cards are injected by JS -->
+      </div>
+
+      <!-- Details Modal -->
+      <div class="modal" id="projModal" aria-hidden="true">
+        <div class="modal-backdrop" data-close="true"></div>
+
+        <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+          <div class="modal-top">
+            <div>
+              <p class="modal-meta" id="modalMeta">BUILD</p>
+              <h2 class="modal-title" id="modalTitle">Project Title</h2>
+              <p class="modal-sub muted" id="modalSub">Short one-liner</p>
+            </div>
+            <button class="modal-x" type="button" aria-label="Close" data-close="true">✕</button>
+          </div>
+
+          <div class="modal-body">
+            <div class="modal-cols">
+              <!-- Left: Story -->
+              <div class="modal-col">
+                <div class="modal-block">
+                  <p class="modal-h">Overview</p>
+                  <p class="muted" id="modalOverview"></p>
+                </div>
+
+                <div class="modal-block">
+                  <p class="modal-h">What I did</p>
+                  <ul class="modal-list" id="modalDid"></ul>
+                </div>
+
+                <div class="modal-block">
+                  <p class="modal-h">Outcomes</p>
+                  <ul class="modal-list" id="modalOutcomes"></ul>
+                </div>
+              </div>
+
+              <!-- Right: Learnings + Links -->
+              <div class="modal-col">
+                <div class="modal-block">
+                  <p class="modal-h">What I gained</p>
+                  <ul class="modal-list" id="modalGained"></ul>
+                </div>
+
+                <div class="modal-block">
+                  <p class="modal-h">Tools & Skills</p>
+                  <div class="tags" id="modalTags"></div>
+                </div>
+
+                <div class="modal-actions">
+                  <a class="btn ghost" id="modalLink1" href="#" target="_blank" rel="noopener noreferrer">View</a>
+                  <a class="btn primary" id="modalLink2" href="#" target="_blank" rel="noopener noreferrer">Repo</a>
+                </div>
+
+                <p class="modal-note muted" id="modalNote"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="page section" data-page="experience" hidden>
+      <p class="page-label">PAGE</p>
+      <h1 class="page-title">Experience</h1>
+      <p class="page-subtitle">Impact-driven work across analytics, experimentation, and research.</p>
+
+      <div class="exp-stack">
+
+        <article class="card exp-card exp-card--split">
+          <div class="exp-left">
+            <p class="exp-meta">Jan 2024 – Jul 2024 · BANGALORE, INDIA</p>
+            <h3 class="exp-role">Junior Data Analyst</h3>
+            <p class="exp-org muted">Trailroot Holidays Pvt Ltd</p>
+
+            <div class="tags exp-tags">
+              <span class="tag">Advanced SQL</span>
+              <span class="tag">Python</span>
+              <span class="tag">ETL</span>
+              <span class="tag">Tableau</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">A/B Testing</span>
+            </div>
+          </div>
+
+          <div class="exp-right">
+            <ul class="exp-bullets">
+              <li>Engineered and maintained scalable ETL workflows using Advanced SQL and Python, transforming high-volume transactional datasets into analytics-ready models aligned with dimensional modeling best practices.</li>
+              <li>Designed and operationalized KPI dashboards in Tableau and Power BI, integrating multi-source datasets to support executive-level decision-making and improving reporting turnaround time by 35%.</li>
+              <li>Led end-to-end A/B testing analysis across digital campaigns, applying statistical hypothesis testing to evaluate performance impact and drive a 15–20% uplift in marketing ROI.</li>
+              <li>Conducted deep-dive cohort and funnel analysis using SQL and Pandas, identifying high-impact drop-off points and informing targeted optimization strategies.</li>
+              <li>Automated recurring reporting pipelines and data validation checks, reducing manual intervention by 40% and improving overall data reliability.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card exp-card exp-card--split">
+          <div class="exp-left">
+            <p class="exp-meta">Oct 2023 – Dec 2023 · BANGALORE, INDIA</p>
+            <h3 class="exp-role">Data Analyst Intern</h3>
+            <p class="exp-org muted">Trailroot Holidays Pvt Ltd</p>
+
+            <div class="tags exp-tags">
+              <span class="tag">SQL</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">NumPy</span>
+              <span class="tag">Dashboarding</span>
+              <span class="tag">Data Governance</span>
+            </div>
+          </div>
+
+          <div class="exp-right">
+            <ul class="exp-bullets">
+              <li>Cleaned, transformed, and modeled large-scale structured datasets using Advanced SQL, ensuring data consistency and compliance with business logic across multiple reporting layers.</li>
+              <li>Built interactive analytics dashboards in Tableau and Power BI tracking 10+ operational and growth KPIs, enabling near real-time performance monitoring across teams.</li>
+              <li>Supported experimentation initiatives by analyzing controlled A/B test results, performing statistical significance testing, and translating findings into clear product recommendations.</li>
+              <li>Assisted in building data extraction and transformation scripts in Python (Pandas, NumPy), optimizing query performance and reducing data processing latency by 25%.</li>
+              <li>Collaborated cross-functionally with engineering and business stakeholders to gather requirements, refine metrics definitions, and standardize data governance practices.</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="page section" data-page="about" hidden>
+      <p class="page-label">PAGE</p>
+      <h1 class="page-title">About</h1>
+      <p class="page-subtitle">I turn messy data into clear stories and better decisions.</p>
+
+      <div class="about-wrap">
+        <p class="about-paragraph">
+          I’m Kshama Girish, an MS Data Science student at Arizona State University. I enjoy working
+          end-to-end from cleaning + modeling data to building dashboards that make insights easy to act on.
+        </p>
+
+        <p class="about-paragraph">
+          Recently, I’ve been focused on analytics engineering style workflows: reusable pipelines,
+          trustworthy metrics, and performance-aware processing (Spark/Kafka/SQL). I care about clarity,
+          documentation, and building things that teams can actually use.
+        </p>
+
+        <div class="about-highlights">
+          <article class="card about-mini">
+            <p class="mini-label">FOCUS</p>
+            <h3 class="card-title">Analytics + BI</h3>
+            <p class="muted">Dashboards, reporting, KPI design, stakeholder-ready insights.</p>
+          </article>
+
+          <article class="card about-mini">
+            <p class="mini-label">BUILD</p>
+            <h3 class="card-title">Data Pipelines</h3>
+            <p class="muted">SQL + Python pipelines, Spark processing, quality checks, automation.</p>
+          </article>
+
+          <article class="card about-mini">
+            <p class="mini-label">APPLY</p>
+            <h3 class="card-title">Applied Modeling</h3>
+            <p class="muted">Classification, explainability (SHAP), evaluation, iteration.</p>
+          </article>
+        </div>
+      </div>
+      <!-- ✅ IMPORTANT: closes about-wrap -->
+    </section>
+    <!-- ✅ IMPORTANT: About section is now properly closed -->
+
+    <!-- RESUME -->
+    <section class="page section" data-page="resume" hidden>
+
+<p class="page-label">PAGE</p>
+<h1 class="page-title">Resume</h1>
+<p class="page-subtitle">
+View or download my latest resume.
+</p>
+
+<div class="card resume-card">
+
+<h3 class="card-title">My Resume</h3>
+
+<p class="muted">
+You can view my resume online or download a PDF version.
+</p>
+
+<div class="resume-actions">
+
+  <a class="btn primary"
+     href="./Kshama_Girish_Resume.pdf"
+     target="_blank"
+     rel="noopener">
+    View Resume
+  </a>
+
+  <a class="btn ghost" href="./Kshama_Girish_Resume.pdf" download="Kshama_Girish_Resume.pdf">
+Download PDF
+</a>
+  
+
+</div>
+
+</div>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section class="page section" data-page="contact" hidden>
+      <p class="page-label">PAGE</p>
+      <h1 class="page-title">Contact</h1>
+      <p class="page-subtitle">Let’s connect — </p>
+
+      <div class="contact-wrap">
+        <div class="card contact-card contact-card--wide">
+          <p class="contact-lead">
+            I’m open to <b>Data Analyst / Data Science</b> roles, dashboard/analytics work,
+            and collaborations where data needs clarity. If you’re building something interesting,
+            I’d love to hear about it.
+          </p>
+
+          <div class="contact-lines contact-lines--clean">
+            <div class="contact-item">
+              <span class="contact-k">Email</span>
+              <a class="contact-v" href="mailto:kshamagirish29@gmail.com">kshamagirish29@gmail.com</a>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-k">LinkedIn</span>
+              <a class="contact-v"
+                 href="https://www.linkedin.com/in/kshama-girish-22421825a/"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                linkedin.com/in/kshama-girish-22421825a
+              </a>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-k">Location</span>
+              <span class="contact-v">Tempe, AZ · open to relocate</span>
+            </div>
+          </div>
+
+          <div class="contact-actions">
+            <a class="btn primary" href="mailto:kshamagirish29@gmail.com">Email me</a>
+            <button class="btn ghost" type="button" onclick="showPage('resume')">View resume</button>
+          </div>
+        </div>
+
+        <div class="card contact-card contact-card--mini">
+          <p class="mini-label">QUICK NOTE</p>
+          <p class="muted" style="margin-bottom:0;">
+            Best way to reach me is email.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- GLOBAL FOOTER (ONLY ONE) -->
+  <footer class="site-footer">
+
+    <div class="footer-nav">
+      <button class="footer-link" onclick="showPage('home')">Home</button>
+      <button class="footer-link" onclick="showPage('experience')">Experience</button>
+      <button class="footer-link" onclick="showPage('projects')">Projects</button>
+      <button class="footer-link" onclick="showPage('about')">About</button>
+      <button class="footer-link" onclick="showPage('contact')">Contact</button>
+    </div>
+  </div>
+
+
+  <div class="footer-bottom-links">
+  <a href="mailto:kshamagirish29@gmail.com">kshamagirish29@gmail.com</a>
+  <span>·</span>
+  <a href="https://www.linkedin.com/in/kshama-girish-22421825a/" target="_blank">LinkedIn</a>
+  <span>·</span>
+  <a href="https://github.com/kgirish29" target="_blank">GitHub</a>
+</div>
+
+  <p class="footer-credit">Crafted with care — Kshama Girish © 2026</p>
+
+
+</footer>
+
+  <!-- IMPORTANT: tsParticles must load BEFORE script.js -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
